@@ -1,0 +1,696 @@
+/* Estilos Generales - ProLanders */
+body {
+    font-family: 'Lora', sans-serif; /* Fuente secundaria para el cuerpo */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Gris muy claro como fondo principal */
+    color: #333; /* Gris oscuro para texto general */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Encabezado */
+.main-header {
+    background-color: #000000; /* Negro para el encabezado */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Sombra más pronunciada */
+}
+
+.header-content {
+    max-width: 1320px; /* Ancho máximo para el container de Bootstrap */
+    margin: 0 auto;
+    display: flex; /* Asegura flexbox para el contenido */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px; /* Padding de Bootstrap container */
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 15px; /* Espacio alrededor de la barra de búsqueda */
+    display: flex;
+}
+
+.search-bar .form-control {
+    border: 1px solid #FFD700; /* Borde amarillo para el input de búsqueda */
+    box-shadow: none; /* Elimina sombras por defecto de Bootstrap en focus */
+    border-radius: 0.25rem 0 0 0.25rem; /* Esquinas redondeadas solo a la izquierda */
+    padding: 0.75rem 1rem; /* Ajuste de padding para el input */
+}
+
+.search-bar button {
+    background-color: #39424e; /* Gris oscuro azulado para el botón */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.25rem; /* Ajuste de padding para el botón */
+    border-radius: 0 0.25rem 0.25rem 0; /* Esquinas solo en el lado derecho */
+    margin-left: -1px; /* Para que se junte con el input */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #FFD700; /* Amarillo en hover */
+    color: #000000; /* Texto negro en hover */
+}
+
+.user-options a {
+    color: #ffffff; /* Blanco para enlaces de usuario */
+    transition: color 0.3s ease;
+}
+
+.user-options a:hover {
+    color: #FFD700; /* Amarillo brillante en hover para enlaces de usuario */
+}
+
+/* Contenido Principal (Cards de Secciones) */
+.main-content {
+    max-width: 1320px; /* Ancho máximo para el container de Bootstrap */
+    margin: 30px auto;
+    padding: 0 15px; /* Padding de Bootstrap container */
+}
+
+/* Carrusel de Index */
+.carousel-item img {
+    max-height: 500px; /* Altura máxima para imágenes del carrusel */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    width: 100%;
+}
+
+.carousel-caption h5 {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #FFD700; /* Amarillo para el título del carrusel */
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-family: 'Lora', sans-serif;
+    color: #f8f9fa; /* Blanco para el texto del carrusel */
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Títulos de sección */
+.section-title {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem; /* Tamaño de fuente para títulos de sección */
+}
+
+.section-subtitle {
+    font-family: 'Lora', sans-serif;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+/* Grid de Categorías y Productos */
+.categories-grid .col,
+.products-grid .col {
+    padding: 15px; /* Espacio entre las columnas para las tarjetas */
+}
+
+.categories-grid .col-md-4 { /* Ajusta el ancho de las columnas en tablets */
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+
+.categories-grid .col-lg-3 { /* Ajusta el ancho de las columnas en desktops */
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.category-card,
+.product-card {
+    background-color: #fff;
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra más suave */
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura en un row */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-card:hover,
+.product-card:hover {
+    transform: translateY(-8px); /* Elevación más pronunciada en hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.category-card img,
+.product-card img {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover;
+    border-radius: 8px; /* Bordes de imagen más redondeados */
+    margin-bottom: 15px;
+    width: 100%; /* Asegura que ocupe todo el ancho de su contenedor */
+}
+
+.category-card h3,
+.product-card h3 {
+    font-size: 24px; /* Títulos de categoría/producto más grandes */
+    margin-bottom: 10px;
+    color: #000000; /* Negro para títulos */
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+}
+
+.product-card h5 { /* Estilo para el nombre del producto en la tarjeta de producto */
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    font-size: 1.5rem; /* Tamaño de fuente para el nombre del producto */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.product-card .card-text { /* Estilo para la descripción breve del producto */
+    font-family: 'Lora', sans-serif;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
+}
+
+.category-card p {
+    font-size: 16px; /* Texto de párrafo ligeramente más grande */
+    color: #666; /* Gris para el texto descriptivo */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Lora', sans-serif;
+    flex-grow: 1;
+}
+
+.category-card .btn,
+.product-card .btn {
+    background-color: #39424e; /* Gris oscuro azulado para el botón */
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none; /* Eliminar borde del botón */
+}
+
+.category-card .btn:hover,
+.product-card .btn:hover {
+    background-color: #FFD700; /* Amarillo en hover */
+    color: #000000; /* Texto negro en hover */
+}
+
+/* Productos Page specific styles */
+.filters-sidebar {
+    background-color: #f8f9fa; /* Fondo claro para la barra lateral de filtros */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filters-sidebar h4 {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFD700; /* Subrayado amarillo */
+}
+
+.filter-group .form-check-label {
+    font-family: 'Lora', sans-serif;
+    color: #555;
+    font-size: 1rem;
+}
+
+.filter-group .form-check-input:checked {
+    background-color: #FFD700; /* Amarillo para checkboxes seleccionados */
+    border-color: #FFD700;
+}
+
+.filter-group .form-control {
+    border-color: #ddd;
+}
+
+/* Carrito de compras */
+.cart-header {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cart-subtitle {
+    font-family: 'Lora', sans-serif;
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cart-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-table th {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    background-color: #e9ecef;
+}
+
+.cart-table td {
+    vertical-align: middle;
+}
+
+.cart-total-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.cart-total-card h4 {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFD700;
+}
+
+.cart-total-card .list-group-item {
+    background-color: transparent;
+    border-color: #eee;
+    color: #333;
+    font-family: 'Lora', sans-serif;
+}
+
+.cart-total-card .list-group-item strong {
+    color: #000000;
+}
+
+.btn-checkout {
+    background-color: #FFD700; /* Amarillo para el botón de checkout */
+    color: #000000 !important; /* Texto negro */
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn-checkout:hover {
+    background-color: #e6c200; /* Tono más oscuro de amarillo en hover */
+}
+
+/* Formularios (Registro y Login) */
+.card-header-form {
+    background-color: #000000; /* Negro para el header de la tarjeta */
+    color: #fff;
+}
+
+.card-header-form h3 {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-header-form p {
+    color: #bbb; /* Gris claro para el párrafo */
+}
+
+.form-label {
+    color: #555; /* Gris para las etiquetas de formulario */
+    font-weight: 500;
+}
+
+.form-control-lg {
+    border-color: #ddd;
+    box-shadow: none;
+    padding: 0.8rem 1rem;
+}
+
+.form-control-lg:focus {
+    border-color: #FFD700; /* Borde amarillo en foco */
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25); /* Sombra de foco amarilla */
+}
+
+.btn-form-submit {
+    background-color: #FFD700; /* Amarillo para el botón de submit */
+    color: #000000; /* Texto negro */
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn-form-submit:hover {
+    background-color: #e6c200; /* Tono más oscuro de amarillo en hover */
+}
+
+.form-check-label a {
+    color: #39424e; /* Color para los enlaces dentro de los términos */
+    font-weight: 600;
+}
+.form-check-label a:hover {
+    color: #000000;
+}
+
+.card-footer .small a {
+    color: #39424e; /* Color para los enlaces del footer de la tarjeta */
+    font-weight: 600;
+}
+.card-footer .small a:hover {
+    color: #000000;
+}
+
+/* Perfil de Usuario */
+.profile-section-title {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-card-header {
+    background-color: #000000;
+    color: #fff;
+}
+
+.profile-card-header h4 {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    font-size: 1.5rem;
+}
+
+.profile-info-input {
+    background-color: #e9ecef; /* Fondo ligeramente gris para campos deshabilitados */
+    border-color: #ced4da;
+    color: #495057;
+}
+
+.btn-edit-profile {
+    background-color: #39424e; /* Gris azulado para el botón editar perfil */
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn-edit-profile:hover {
+    background-color: #000000;
+}
+
+.profile-options .btn {
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-options .btn-primary { /* Cambiar Contraseña */
+    background-color: #39424e;
+    border-color: #39424e;
+    color: #fff;
+}
+.profile-options .btn-primary:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.profile-options .btn-danger { /* Eliminar Cuenta */
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.profile-options .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.profile-options .btn-secondary { /* Cerrar Sesión */
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.profile-options .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.order-history .list-group-item {
+    font-family: 'Lora', sans-serif;
+    color: #333;
+    border-color: #eee;
+}
+
+.order-history .badge {
+    font-size: 0.9em;
+    padding: 0.5em 0.8em;
+}
+
+.order-history a {
+    color: #39424e;
+}
+.order-history a:hover {
+    color: #000000;
+}
+
+/* Panel de Administración */
+.admin-sidebar {
+    background-color: #212529; /* Negro oscuro, similar al header */
+    color: #f8f9fa; /* Blanco claro */
+    min-height: calc(100vh - 100px); /* Ajusta la altura para que no se superponga con header/footer */
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+.sidebar-heading {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    font-size: 1.8rem !important; /* Tamaño de fuente más grande para el título del sidebar */
+    color: #FFD700; /* Título del sidebar en amarillo */
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.admin-sidebar .list-group-item { /* Usamos list-group-item de Bootstrap */
+    background-color: transparent; /* Fondo transparente para los elementos de la lista */
+    border: none; /* Eliminar borde del list-group-item */
+    color: #f8f9fa; /* Blanco claro */
+    padding: 15px 20px; /* Aumentar padding */
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex; /* Para alinear ícono y texto */
+    align-items: center;
+    font-size: 1.1rem; /* Tamaño de fuente ligeramente más grande */
+}
+.admin-sidebar .list-group-item i {
+    margin-right: 12px; /* Espacio entre ícono y texto */
+    font-size: 1.2rem; /* Tamaño del ícono */
+}
+.admin-sidebar .list-group-item:hover,
+.admin-sidebar .list-group-item.active {
+    background-color: #39424e; /* Color oscuro azulado de la marca */
+    color: #FFD700; /* Amarillo brillante */
+}
+/* Asegura que el color se aplique también a .nav-link dentro del sidebar si lo usas */
+.admin-sidebar .nav-link {
+    color: #f8f9fa;
+}
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background-color: #39424e;
+    color: #FFD700;
+}
+
+.admin-content {
+    background-color: #ffffff;
+    padding: 30px; /* Más padding */
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra mejorada */
+}
+.admin-section-title {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    margin-bottom: 30px; /* Más espacio */
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 15px; /* Más padding */
+    font-size: 2rem; /* Tamaño de fuente para títulos de sección admin */
+}
+.admin-table th {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #000000;
+    background-color: #e9ecef;
+    padding: 1rem; /* Más padding en los encabezados de tabla */
+}
+.admin-table td {
+    padding: 1rem; /* Más padding en las celdas de tabla */
+}
+.admin-table td img {
+    width: 60px; /* Imágenes de producto más grandes en tabla */
+    height: 60px;
+    border-radius: 6px;
+}
+.admin-table .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+.admin-table .btn-primary {
+    background-color: #39424e;
+    border-color: #39424e;
+}
+.admin-table .btn-primary:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+.admin-table .btn-warning {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: #000000 !important; /* Asegurar texto negro */
+}
+.admin-table .btn-warning:hover {
+    background-color: #e6c200;
+    border-color: #e6c200;
+}
+
+/* Pie de Página */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px; /* Más margen superior */
+    background-color: #eee; /* Gris claro para el footer */
+    color: #777; /* Gris medio para texto del footer */
+    font-size: 15px; /* Tamaño de fuente ligeramente más grande */
+    border-top: 1px solid #ddd;
+    font-family: 'Lora', sans-serif;
+}
+
+/* Media Queries para Responsividad (complementando Bootstrap) */
+@media (max-width: 992px) { /* Para tablets y pantallas más pequeñas */
+    .header-content {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        justify-content: center;
+    }
+    .search-bar {
+        order: 3; /* Mueve la barra de búsqueda abajo */
+        width: 100%;
+        margin-top: 15px;
+    }
+    .user-options {
+        order: 2; /* Mueve las opciones de usuario al centro */
+        margin-top: 15px;
+        width: auto;
+    }
+    .logo {
+        order: 1; /* Mantiene el logo arriba */
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .categories-grid .col-md-4,
+    .products-grid .col-md-4 {
+        width: 50%; /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) { /* Para móviles */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .user-options {
+        margin-top: 15px;
+        flex-direction: column; /* Apila los enlaces en pantallas pequeñas */
+        gap: 10px;
+    }
+
+    .user-options a {
+        font-size: 16px; /* Ajusta tamaño de texto en móviles */
+    }
+
+    .categories-grid .col-md-4,
+    .products-grid .col-md-4 {
+        width: 100%; /* Una columna en pantallas pequeñas */
+    }
+
+    .category-card img,
+    .product-card img {
+        height: 180px; /* Imágenes más pequeñas en móviles */
+    }
+
+    .category-card h3,
+    .product-card h3 {
+        font-size: 22px;
+    }
+
+    .admin-sidebar {
+        min-height: auto; /* Altura automática en móviles */
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .admin-sidebar .list-group-item {
+        justify-content: center; /* Centrar elementos del sidebar en móvil */
+        text-align: center;
+    }
+    .admin-sidebar .list-group-item i {
+        margin-right: 0;
+        margin-bottom: 5px; /* Espacio vertical */
+    }
+    .admin-content {
+        padding: 20px;
+    }
+    .admin-section-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar input,
+    .search-bar button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .category-card,
+    .product-card {
+        padding: 15px;
+    }
+
+    .category-card h3,
+    .product-card h3 {
+        font-size: 20px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.8rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
